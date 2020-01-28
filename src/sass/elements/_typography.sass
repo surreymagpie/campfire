@@ -1,2 +1,31 @@
 html
-  font-family: 'Nunito Sans', sans-serif
+  font:
+    family: 'Nunito Sans', sans-serif
+    size: $root-font-size
+    line-height: 1.6
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  font:
+    weight: 900
+h1
+  @include font-size(50px)
+
+h2
+  @include font-size(40px)
+
+h3
+  @include font-size(32px)
+
+h4
+  @include font-size(26px)
+
+h5
+  @include font-size(21px)
+
+h6
+  @include font-size(18px)
+
+p
+  @include font-size(18px)
+  color: $scout-grey-60

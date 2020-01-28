@@ -16,4 +16,55 @@ body {
 
 html {
   font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 50px;
+  font-size: 3.125rem;
+}
+
+h2 {
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+
+h5 {
+  font-size: 21px;
+  font-size: 1.3125rem;
+}
+
+h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #666666;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #00a794;
+}
+a:hover, a:focus, a:visited:hover, a:visited:focus {
+  text-decoration: underline;
 }
