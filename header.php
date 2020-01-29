@@ -7,6 +7,19 @@
 </head>
 	<body <?php body_class(); ?>>
 		<header class="site__header" role="banner">
-			Header content
+			<div class="site__branding">
+				<?php if (has_custom_logo()) :?>
+				<div class="logo">
+					<?php the_custom_logo(); ?>
+				</div>
+				<?php endif; ?>
+
+				<div class="titles">
+					<h1 class="site__title"><?php bloginfo( 'name' ); ?></h1>
+					<p class="site__tag"><?php bloginfo( 'description' ); ?></p>
+				</div>
+
+			</div> <!-- site__branding -->
+			<div class="top-navigation"></div>
 		</header>
 		<main class="site__content" role="main">
