@@ -20,6 +20,12 @@
 				</div>
 
 			</div> <!-- site__branding -->
-			<div class="top-navigation"></div>
+			<nav class="primary-menu" role="navigation">
+				<?php wp_nav_menu( array(
+					'theme_location'  => 'primary',
+					'container'       => false,
+					'menu_class'      => 'primary-menu__list',
+				) ); ?>
+			</nav>
 		</header>
 		<main class="site__content" role="main">

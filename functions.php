@@ -28,5 +28,12 @@ function campfire_setup()
 		'flex-width'  => true,
 		'header-text' => array( 'titles','site__title', 'site__tag')
 	));
+
+	add_theme_support( 'menus' );
+
+	register_nav_menus( array(
+		'primary' => esc_html__( 'Header Menu', 'campfire' ),
+		'footer' => esc_html__( 'Footer Menu', 'campfire' )
+	));
 }
 add_action( 'after_setup_theme', 'campfire_setup');
