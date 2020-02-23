@@ -1,3 +1,9 @@
-@mixin font-size($size)
+//  Outputs a rem-based fontsize with px fallback for old browsers
+    Takes:
+      $size   - specified in px(required)
+      $height - line height in px (optional)
+
+@mixin font-size($size, $height:($size*$root-line-height))
   font-size: $size
   font-size: ($size / $root-font-size) * 1rem
+  line-height: ($height / $size)

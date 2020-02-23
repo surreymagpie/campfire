@@ -17,54 +17,131 @@ body {
 html {
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
-  font-line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333333;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+  color: #666666;
+  margin-bottom: 0.25em;
+  margin-top: 0;
   font-weight: 900;
 }
 
 h1 {
   font-size: 50px;
   font-size: 3.125rem;
+  line-height: 1.12;
 }
 
 h2 {
   font-size: 40px;
   font-size: 2.5rem;
+  line-height: 1.2;
 }
 
 h3 {
   font-size: 32px;
   font-size: 2rem;
+  line-height: 1.25;
 }
 
 h4 {
   font-size: 26px;
   font-size: 1.625rem;
+  line-height: 1.2307692308;
 }
 
 h5 {
   font-size: 21px;
   font-size: 1.3125rem;
+  line-height: 1.1428571429;
 }
 
 h6 {
   font-size: 18px;
   font-size: 1.125rem;
+  line-height: 1.3333333333;
 }
 
 p {
   font-size: 18px;
   font-size: 1.125rem;
-  color: #666666;
+  line-height: 1.3333333333;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+b, strong {
+  font-weight: 900;
+}
+
+em, i {
+  font-style: italic;
+}
+
+small, cite {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.7142857143;
+  color: #999999;
+}
+
+blockquote {
+  padding: 1.5rem;
+  position: relative;
+  background-color: #f2f2f2;
+}
+blockquote::before {
+  content: url("../images/left-quotes-sign.svg");
+  display: inline-block;
+  float: left;
+  margin-right: 1em;
+  width: 2rem;
+  height: 2rem;
+}
+blockquote p {
+  margin-bottom: 0.5em;
+}
+blockquote cite {
+  font-weight: 300;
+  font-style: italic;
+}
+@media (min-width: 40rem) {
+  blockquote {
+    margin: 0 6rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+  }
+  blockquote::before {
+    position: absolute;
+    left: 20px;
+  }
 }
 
 a, a:visited {
   text-decoration: none;
   color: #00a794;
 }
-a:hover, a:focus, a:visited:hover, a:visited:focus {
+
+a:hover,
+a:focus {
   text-decoration: underline;
+}
+
+ul, ol {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.3333333333;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-left: 3rem;
+}
+ul ul, ul ol, ol ul, ol ol {
+  margin-bottom: 0;
+}
+
+hr {
+  border: 2px solid #00a794;
+  margin: 1.5rem 3rem;
 }
