@@ -118,3 +118,15 @@ a:hover,
 a:focus {
   text-decoration: underline;
 }
+
+ul, ol {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.3333333333;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-left: 3rem;
+}
+ul ul, ul ol, ol ul, ol ol {
+  margin-bottom: 0;
+}
