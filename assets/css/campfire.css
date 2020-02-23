@@ -88,18 +88,17 @@ small, cite {
 }
 
 blockquote {
-  padding: 1.5rem 1.5rem 1.5rem 4.5rem;
-  margin: 0 6rem 1.5rem;
+  padding: 1.5rem;
   position: relative;
   background-color: #f2f2f2;
 }
 blockquote::before {
   content: url("../images/left-quotes-sign.svg");
   display: inline-block;
-  position: absolute;
+  float: left;
+  margin-right: 1em;
   width: 2rem;
   height: 2rem;
-  left: 20px;
 }
 blockquote p {
   margin-bottom: 0.5em;
@@ -107,6 +106,16 @@ blockquote p {
 blockquote cite {
   font-weight: 300;
   font-style: italic;
+}
+@media (min-width: 40rem) {
+  blockquote {
+    margin: 0 6rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+  }
+  blockquote::before {
+    position: absolute;
+    left: 20px;
+  }
 }
 
 a, a:visited {

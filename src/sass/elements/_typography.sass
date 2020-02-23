@@ -46,18 +46,17 @@ small, cite
   color: $scout-grey-40
 
 blockquote
-  padding: $base-spacing $base-spacing $base-spacing 3*$base-spacing
-  margin: 0 4*$base-spacing $base-spacing
+  padding: $base-spacing
   position: relative
   background-color: $scout-grey-5
 
   &::before
     content: url('../images/left-quotes-sign.svg')
     display: inline-block
-    position: absolute
+    float: left
+    margin-right: 1em
     width: 2rem
     height: 2rem
-    left: 20px
 
   p
     margin-bottom: 0.5em
@@ -66,3 +65,11 @@ blockquote
     font:
       weight: 300
       style: italic
+
+  @media (min-width: 40rem)
+    margin: 0 4*$base-spacing $base-spacing
+    padding: $base-spacing $base-spacing $base-spacing 3*$base-spacing
+
+    &::before
+      position: absolute
+      left: 20px
