@@ -145,3 +145,13 @@ hr {
   border: 2px solid #00a794;
   margin: 1.5rem 3rem;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page__wrapper {
+  flex-grow: 1;
+}
