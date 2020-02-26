@@ -37,3 +37,49 @@ function campfire_setup()
 	));
 }
 add_action( 'after_setup_theme', 'campfire_setup');
+
+/*
+===============================
+Widget areas
+===============================
+*/
+function campfire_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar', 'woggle' ),
+		'id'            => 'sidebar-r',
+		'description'   => esc_html__( 'Place widgets to right hand side of content', 'woggle' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget__title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Left', 'woggle' ),
+		'id'            => 'footer-l',
+		'description'   => esc_html__( 'First Footer Widget Area', 'woggle' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget__title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Centre', 'woggle' ),
+		'id'            => 'footer-c',
+		'description'   => esc_html__( 'Second Footer Widget Area', 'woggle' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget__title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Right', 'woggle' ),
+		'id'            => 'footer-r',
+		'description'   => esc_html__( 'Third Footer Widget Area', 'woggle' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget__title">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'campfire_widgets_init' );
