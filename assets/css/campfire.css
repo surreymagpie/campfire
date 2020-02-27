@@ -154,4 +154,39 @@ body {
 
 .page__wrapper {
   flex-grow: 1;
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  grid-row-gap: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.site__content, .sidebar-right {
+  grid-column: 2;
+}
+
+.sidebar-right {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 3rem;
+}
+.sidebar-right .widget {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 60rem) {
+  .page__wrapper {
+    grid-template-columns: 1fr 56rem 1fr;
+  }
+
+  .has-sidebar-right .page__wrapper {
+    grid-template-columns: 1fr minmax(31rem, 46rem) 20rem 1fr;
+    grid-column-gap: 3rem;
+  }
+  .has-sidebar-right .sidebar-right {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0;
+    grid-column: 3;
+  }
 }

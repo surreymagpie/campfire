@@ -80,6 +80,20 @@ function campfire_widgets_init() {
 		'before_title'  => '<h2 class="widget__title">',
 		'after_title'   => '</h2>',
 	) );
-
 }
 add_action( 'widgets_init', 'campfire_widgets_init' );
+
+/*
+===============================
+Add class to body tag when
+sidebar is present
+===============================
+*/
+
+function campfire_body_class( $classes ) {
+	if ( is_active_sidebar( 'sidebar-r' ) ) {
+		$classes[] = 'has-sidebar-right';
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'campfire_body_class' );
