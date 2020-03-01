@@ -89,13 +89,15 @@ small, cite {
 }
 
 blockquote {
+  margin-left: 0;
+  margin-right: 0;
   padding: 1.5rem;
   position: relative;
   background-color: #f2f2f2;
 }
 blockquote::before {
   content: url("../images/left-quotes-sign.svg");
-  display: inline-block;
+  display: block;
   float: left;
   margin-right: 1em;
   width: 2rem;
@@ -110,7 +112,7 @@ blockquote cite {
 }
 @media (min-width: 40rem) {
   blockquote {
-    margin: 0 6rem 1.5rem;
+    margin: 0 3rem 1.5rem;
     padding: 1.5rem 1.5rem 1.5rem 4.5rem;
   }
   blockquote::before {
