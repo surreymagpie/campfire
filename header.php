@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ) ?>">
 	<title><?php wp_title( ' | ', true, 'right' ) . bloginfo( 'name' ); ?></title>
@@ -18,8 +18,7 @@
 					<h1 class="site__title"><?php bloginfo( 'name' ); ?></h1>
 					<p class="site__tag"><?php bloginfo( 'description' ); ?></p>
 				</div>
-
-			</div> <!-- site__branding -->
+			</div>			
 			<nav class="primary-menu" role="navigation">
 				<?php wp_nav_menu( array(
 					'theme_location'  => 'primary',
