@@ -1,0 +1,28 @@
+// If no JavaScript, hide toggle button and show menu
+.menu-toggle
+  display: none
+
+.primary-menu
+  background-color: $scout-purple
+  color: $scout-white
+
+  &__list,
+  .sub-menu
+    margin-bottom: 0
+    padding-left: 0
+    list-style: none
+
+  a
+    display: block
+    padding: 1em 1.5em
+    text-align: center
+    @include font-size(18px, 18px)
+    color: inherit
+
+.sub-menu
+  display: none
+  
+.current-menu-item a,
+.current-page-ancestor a,
+.current_page_parent a
+  font-weight: 700

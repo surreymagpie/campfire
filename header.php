@@ -20,6 +20,12 @@
 				</div>
 			</div>			
 			<nav class="primary-menu" role="navigation">
+				<button id="menu-toggle" class="menu-toggle">
+					<svg viewBox="0 0 20 20">
+						<use href="<?php echo get_stylesheet_directory_uri() . '/assets/images/menu.svg#Menu'; ?>" />
+					</svg>
+					<span>Menu</span>
+				</button>
 				<?php wp_nav_menu( array(
 					'theme_location'  => 'primary',
 					'container'       => false,
