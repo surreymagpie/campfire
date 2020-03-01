@@ -1,0 +1,20 @@
+footer
+  padding: $double-spacing
+
+.footer__widget-areas
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+  grid-gap: $double-spacing
+
+@media (min-width: 800px)
+  .footer__widget-areas
+    grid-template-columns: repeat(3, 1fr)
+
+  .footer__widget-area--left
+    grid-column: 1
+
+  .footer__widget-area--centre
+    grid-column: 2
+    
+  .footer__widget-area--right
+    grid-column: 3

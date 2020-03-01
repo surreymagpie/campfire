@@ -28,4 +28,5 @@
 				) ); ?>
 			</nav>
 		</header>
-		<main class="site__content" role="main">
+		<div class="page__wrapper">
+			<main class="site__content" role="main">
