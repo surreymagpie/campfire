@@ -2,15 +2,13 @@
 .menu-toggle
   display: none
 
-.primary-menu
+.primary-menu__list,
+.sub-menu
   background-color: $scout-purple
   color: $scout-white
-
-  &__list,
-  .sub-menu
-    margin-bottom: 0
-    padding-left: 0
-    list-style: none
+  margin-bottom: 0
+  padding-left: 0
+  list-style: none
 
   a
     display: block
@@ -26,3 +24,45 @@
 .current-page-ancestor a,
 .current_page_parent a
   font-weight: 700
+
+// When JavaScript available, show toggle and hide menu
+.js
+  .menu-toggle
+    display: block
+    position: absolute
+    top: 10px
+    left: 10px
+    width: 2rem
+    padding: 0
+    border: none
+    background: transparent
+    cursor: pointer
+    z-index: 3
+    
+    svg
+      width: 32px
+      height: 32px
+      
+    span
+      position: absolute
+      clip: rect(1px,1px,1px,1px)
+
+  .primary-menu__list
+    position: absolute
+    top: 0
+    left: -20rem
+    width: 20rem
+    min-height: 100vh
+    padding-top: $double-spacing
+    transition: transform 400ms ease-in-out
+    z-index: 1
+
+    &.is-open
+      transform: translateX(20rem)
+
+// Styling SVG
+#menu-toggle
+  fill: $scout-purple
+  
+  &.inverted
+    fill: $scout-white
