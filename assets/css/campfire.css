@@ -224,7 +224,7 @@ footer {
   }
 }
 .site__branding {
-  width: 96%;
+  width: 94%;
   margin: 0 auto;
   text-align: center;
   padding: 1.5rem 2rem 0;
@@ -336,4 +336,27 @@ footer {
 }
 #menu-toggle.inverted {
   fill: #ffffff;
+}
+
+@media (min-width: 50rem) {
+  .js .primary-menu {
+    background-color: #7413dc;
+    color: #ffffff;
+  }
+  .js .primary-menu__list {
+    position: static;
+    width: 94%;
+    min-height: unset;
+    padding-top: 0;
+    display: flex;
+    justify-content: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .js .menu-toggle {
+    display: none;
+  }
+  .js .menu-item:first-child a {
+    padding-left: 0;
+  }
 }
