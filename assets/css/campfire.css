@@ -224,10 +224,46 @@ footer {
   }
 }
 .site__branding {
-  margin: 1.5rem;
+  width: 96%;
+  margin: 0 auto;
   text-align: center;
+  padding: 1.5rem 2rem 0;
 }
 
+.logo ~ .titles {
+  margin-top: 1.5rem;
+}
+
+.site__title {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.site__tag {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.3333333333;
+  margin-bottom: 0;
+}
+
+@media (min-width: 50rem) {
+  .site__branding {
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 3rem;
+    align-items: end;
+    max-width: 1200px;
+    padding: 1.5rem 0;
+  }
+
+  .logo ~ .titles {
+    margin-top: 0;
+  }
+}
 .menu-toggle {
   display: none;
 }
