@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -353,10 +354,29 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
   }
+  .js .primary-menu__list a {
+    text-align: left;
+  }
   .js .menu-toggle {
     display: none;
   }
-  .js .menu-item:first-child a {
-    padding-left: 0;
+  .js .primary-menu__list > .menu-item:first-child {
+    margin-left: -1.5rem;
   }
+}
+.menu-item-has-children {
+  position: relative;
+}
+.menu-item-has-children > a::after {
+  content: "⯆";
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 8px;
+  font-size: 0.8em;
+}
+.menu-item-has-children:hover > .sub-menu, .menu-item-has-children:focus-within > .sub-menu {
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
 }

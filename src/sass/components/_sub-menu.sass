@@ -1,0 +1,16 @@
+.menu-item-has-children
+  position: relative
+
+  & > a::after
+    content: '\2BC6'
+    position: absolute
+    top: calc(50% - 6px)
+    right: 8px
+    font-size: 0.8em
+
+  &:hover > .sub-menu,
+  &:focus-within > .sub-menu
+    display: block
+    position: absolute
+    width: 100%
+    left: 0
