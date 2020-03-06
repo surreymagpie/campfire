@@ -1,12 +1,15 @@
+// Sub-menus hidden by default
+.sub-menu
+  display: none
+    
 .menu-item-has-children
   position: relative
 
   & > a::after
     content: '\2BC6'
-    position: absolute
-    top: calc(50% - 6px)
-    right: 8px
+    position: relative
     font-size: 0.8em
+    padding-left: 0.5em
 
   &:hover > .sub-menu,
   &:focus-within > .sub-menu
@@ -14,3 +17,16 @@
     position: absolute
     width: 100%
     left: 0
+    background-color: $scout-grey-80
+
+// Third level menus
+.sub-menu
+  .menu-item-has-children
+
+    & > a::after
+      content: '\2BC8'
+    
+    &:hover > .sub-menu
+      left: 100%
+      top: 0
+      background-color: $scout-grey-60
