@@ -1,0 +1,96 @@
+// If no JavaScript, hide toggle button and show menu
+.menu-toggle
+  display: none
+
+.primary-menu__list,
+.sub-menu
+  background-color: $scout-purple
+  color: $scout-white
+  margin-bottom: 0
+  padding-left: 0
+  list-style: none
+
+  a
+    display: block
+    padding: 1em 1.5em
+    text-align: center
+    @include font-size(18px, 18px)
+    color: inherit
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      background-color: $scout-teal
+
+.current-menu-item a,
+.current-page-ancestor a,
+.current_page_parent a
+  font-weight: 700
+
+// When JavaScript available, show toggle and hide menu
+.js
+  .menu-toggle
+    display: block
+    position: absolute
+    top: 10px
+    left: 10px
+    width: 2rem
+    padding: 0
+    border: none
+    background: transparent
+    cursor: pointer
+    z-index: 3
+    
+    svg
+      width: 32px
+      height: 32px
+      
+    span
+      position: absolute
+      clip: rect(1px,1px,1px,1px)
+
+  .primary-menu__list
+    position: absolute
+    top: 0
+    left: -20rem
+    width: 20rem
+    min-height: 100vh
+    padding-top: $double-spacing
+    transition: transform 400ms ease-in-out
+    z-index: 1
+
+    &.is-open
+      transform: translateX(20rem)
+
+// Styling SVG
+#menu-toggle
+  fill: $scout-purple
+  
+  &.inverted
+    fill: $scout-white
+
+// Larger Screens
+@media (min-width: 50rem)
+  .js
+    .primary-menu
+      background-color: $scout-purple
+      color: $scout-white
+
+      &__list
+        position: static
+        width: 94%
+        min-height: unset
+        padding-top: 0
+        display: flex
+        justify-content: start
+        max-width: 1200px
+        margin: 0 auto
+
+        a
+          text-align: left
+
+    .menu-toggle
+      display: none
+
+    .primary-menu__list > .menu-item:first-child
+      margin-left: -1.5rem

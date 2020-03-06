@@ -1,0 +1,30 @@
+.site__branding
+  width: 94%
+  margin: 0 auto
+  text-align: center
+  padding: $base-spacing 2rem 0
+
+.logo ~ .titles
+  margin-top: $base-spacing
+
+.site__title
+  @include font-size(28px, 28px)
+  margin-bottom: 1rem
+  color: $scout-black
+
+.site__tag
+  @include font-size(18px, 24px)
+  margin-bottom: 0
+
+@media (min-width: 50rem)
+  .site__branding
+    text-align: left
+    display: grid
+    grid-template-columns: auto 1fr
+    grid-gap: $double-spacing
+    align-items: end
+    max-width: 1200px
+    padding: $base-spacing 0
+
+  .logo ~ .titles
+    margin-top: 0

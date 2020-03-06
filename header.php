@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ) ?>">
 	<title><?php wp_title( ' | ', true, 'right' ) . bloginfo( 'name' ); ?></title>
@@ -18,9 +18,14 @@
 					<h1 class="site__title"><?php bloginfo( 'name' ); ?></h1>
 					<p class="site__tag"><?php bloginfo( 'description' ); ?></p>
 				</div>
-
-			</div> <!-- site__branding -->
+			</div>			
 			<nav class="primary-menu" role="navigation">
+				<button id="menu-toggle" class="menu-toggle">
+					<svg viewBox="0 0 20 20">
+						<use href="<?php echo get_stylesheet_directory_uri() . '/assets/images/menu.svg#Menu'; ?>" />
+					</svg>
+					<span>Menu</span>
+				</button>
 				<?php wp_nav_menu( array(
 					'theme_location'  => 'primary',
 					'container'       => false,
