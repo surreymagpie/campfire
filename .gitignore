@@ -1,2 +1,5 @@
 .sass-cache/
 node_modules/
+
+# Ignore local dev settings
+settings.js
