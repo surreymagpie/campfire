@@ -1,0 +1,28 @@
+{
+  "name": "campfire",
+  "version": "0.0.2-alpha",
+  "description": "A WordPress theme for UK scout groups based on the 2018 brand guidelines",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surreymagpie/campfire.git"
+  },
+  "keywords": [
+    "WordPress",
+    "theme",
+    "scouts"
+  ],
+  "author": "Rob Curtis",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/surreymagpie/campfire/issues"
+  },
+  "homepage": "https://github.com/surreymagpie/campfire#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  }
+}
