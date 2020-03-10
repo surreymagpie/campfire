@@ -48,6 +48,10 @@
     span
       position: absolute
       clip: rect(1px,1px,1px,1px)
+      left: -999px
+
+    &:focus
+      outline: none
 
   .primary-menu__list
     position: absolute
@@ -78,19 +82,14 @@
 
       &__list
         position: static
-        width: 94%
         min-height: unset
         padding-top: 0
         display: flex
         justify-content: start
-        max-width: 1200px
-        margin: 0 auto
+        width: auto
 
         a
           text-align: left
 
     .menu-toggle
       display: none
-
-    .primary-menu__list > .menu-item:first-child
-      margin-left: -1.5rem

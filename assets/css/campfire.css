@@ -159,51 +159,37 @@ body {
   min-height: 100vh;
 }
 
+.container {
+  width: 94%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .page__wrapper {
   flex-grow: 1;
-  display: grid;
-  grid-template-columns: 3rem 1fr 3rem;
-  grid-row-gap: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
-.site__content, .sidebar-right {
-  grid-column: 2;
-}
-
 .sidebar-right {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;
 }
 
-.sidebar-right .widget {
-  margin-bottom: 1.5rem;
-}
-
 @media (min-width: 60rem) {
-  .page__wrapper {
-    grid-template-columns: 1fr 56rem 1fr;
-  }
   .has-sidebar-right .page__wrapper {
-    grid-template-columns: 1fr minmax(31rem, 46rem) 20rem 1fr;
-    grid-column-gap: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+    grid-gap: 3rem;
   }
-  .has-sidebar-right .sidebar-right {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 0;
-    grid-column: 3;
+  .sidebar-right {
+    grid-auto-rows: max-content;
   }
 }
 
 .site__header {
   position: relative;
-}
-
-footer {
-  padding: 3rem;
 }
 
 .footer__widget-areas {
@@ -228,8 +214,6 @@ footer {
 }
 
 .site__branding {
-  width: 94%;
-  margin: 0 auto;
   text-align: center;
   padding: 1.5rem 2rem 0;
 }
@@ -260,7 +244,6 @@ footer {
     grid-template-columns: auto 1fr;
     grid-gap: 3rem;
     align-items: end;
-    max-width: 1200px;
     padding: 1.5rem 0;
   }
   .logo ~ .titles {
@@ -326,6 +309,11 @@ footer {
 .js .menu-toggle span {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
+  left: -999px;
+}
+
+.js .menu-toggle:focus {
+  outline: none;
 }
 
 .js .primary-menu__list {
@@ -358,22 +346,17 @@ footer {
   }
   .js .primary-menu__list {
     position: static;
-    width: 94%;
     min-height: unset;
     padding-top: 0;
     display: flex;
     justify-content: start;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: auto;
   }
   .js .primary-menu__list a {
     text-align: left;
   }
   .js .menu-toggle {
     display: none;
-  }
-  .js .primary-menu__list > .menu-item:first-child {
-    margin-left: -1.5rem;
   }
 }
 
