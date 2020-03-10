@@ -2,7 +2,7 @@ const   { src, dest, series, watch }    = require ('gulp');
 const   sass                            = require ('gulp-sass');
         sass.compiler                   = require ('node-sass');
 const   browserSync                     = require ('browser-sync').create();
-const   settings                        = require ('./settings')
+const   settings                        = require ('./settings');
 
 // Compile Sass files into CSS
 function styles() {

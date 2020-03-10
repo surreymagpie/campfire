@@ -10,4 +10,4 @@
  * 
  */
 
-export const urlToPreview = 'http://localhost';
+exports.urlToPreview = 'http://localhost';
