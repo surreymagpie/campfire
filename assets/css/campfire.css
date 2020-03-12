@@ -419,6 +419,32 @@ body {
   color: #000000;
 }
 
+.widget_calendar caption {
+  font-weight: 700;
+}
+
+.widget_calendar table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid;
+}
+
+.widget_calendar thead,
+.widget_calendar tfoot {
+  border: 1px solid;
+  background-color: #cccccc;
+}
+
+.widget_calendar tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+.widget_calendar th, .widget_calendar td {
+  width: 14%;
+  text-align: center;
+}
+
 .site__branding {
   text-align: center;
   padding: 1.5rem 2rem 0;
