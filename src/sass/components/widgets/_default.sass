@@ -1,17 +1,20 @@
 .widget
   background-color: #f5f5f5
   padding: 1.5rem
-  // border-radius: 1rem
 
   ul
     list-style: none
     margin: 0
     padding-left: 0
-  
-  & + &
-    margin-top: $base-spacing
+
+  select
+    width: 100%
 
 .widget__title
   @include font-size(20px, 24px)
   font-weight: 900
   color: $scout-black
+
+@media (min-width: 60rem)
+  .widget + .widget
+    margin-top: $base-spacing
