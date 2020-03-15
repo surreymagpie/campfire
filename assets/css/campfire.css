@@ -446,10 +446,6 @@ body {
   width: 100%;
 }
 
-.widget a {
-  color: #333333;
-}
-
 .widget-title,
 .widget__title {
   font-size: 20px;
@@ -492,6 +488,8 @@ body {
 .widget_calendar th, .widget_calendar td {
   width: 14%;
   text-align: center;
+  border: none;
+  padding: 0.75em 0.25em;
 }
 
 .widget_rss li + li {
