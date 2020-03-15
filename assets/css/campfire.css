@@ -446,12 +446,20 @@ body {
   width: 100%;
 }
 
+.widget a {
+  color: #333333;
+}
+
+.widget-title,
 .widget__title {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
   font-weight: 900;
   color: #000000;
+  border-bottom: 3px solid #7413dc;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 @media (min-width: 60rem) {
@@ -494,6 +502,59 @@ body {
   display: block;
   font-size: 80%;
   font-weight: 300;
+}
+
+.osm_comingup_title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.osm_comingup_date {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  font-weight: 300;
+}
+
+.osm_comingup_description {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-bottom: 1px solid #999999;
+  padding: 0.75em 0;
+}
+
+.osm_patrols {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: none;
+}
+
+.osm_patrols th,
+.osm_patrols td {
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #999999;
+}
+
+.osm_patrols th {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  font-weight: 700;
+}
+
+.osm_patrols th:first-child {
+  text-align: left;
+  width: 66%;
+}
+
+.points {
+  text-align: center;
 }
 
 .site__branding {

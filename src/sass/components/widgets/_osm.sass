@@ -1,0 +1,38 @@
+.osm_comingup_title
+  @include font-size(18px, 24px)
+  font-weight: 700
+  margin-top: 1em
+
+.osm_comingup_date
+  @include font-size(14px, 16px)
+  font-weight: 300
+
+.osm_comingup_description
+  @include font-size(16px, 20px)
+  border-bottom: 1px solid $scout-grey-40
+  padding: 0.75em 0
+  
+
+.osm_patrols
+  width: 100%
+  table-layout: fixed
+  border-collapse: collapse
+  border: none
+
+  th,
+  td
+    border:
+      width: 0 0 1px
+      style: solid
+      color: $scout-grey-40
+  
+  th
+    @include font-size(18px, 24px)
+    font-weight: 700
+
+    &:first-child
+      text-align: left
+      width: 66%
+    
+.points
+  text-align: center
