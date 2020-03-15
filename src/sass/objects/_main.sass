@@ -13,10 +13,11 @@ body
   margin-top: $double-spacing
   margin-bottom: $double-spacing
 
-.sidebar-right
-  display: grid
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
-  grid-gap: $double-spacing
+@media (min-width: 45rem)
+  .sidebar-right
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+    grid-gap: $double-spacing
 
 @media (min-width: 60rem)
   .has-sidebar-right
@@ -27,3 +28,4 @@ body
 
   .sidebar-right
     grid-auto-rows: max-content
+    grid-gap: 0

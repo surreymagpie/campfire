@@ -1,6 +1,6 @@
 {
   "name": "campfire",
-  "version": "0.0.2-alpha",
+  "version": "0.0.3-alpha",
   "description": "A WordPress theme for UK scout groups based on the 2018 brand guidelines",
   "main": "index.js",
   "scripts": {},

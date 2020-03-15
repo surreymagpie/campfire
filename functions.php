@@ -13,11 +13,14 @@ function campfire_scripts()
 	} else {
 		$version = $theme->Version;
 	}
-	
-  wp_enqueue_style( 'google', 'https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900' );
-  wp_enqueue_style( 'campfire', get_stylesheet_directory_uri() . '/assets/css/campfire.css', array(), $version );
 
-  wp_enqueue_script( 'campfire', get_stylesheet_directory_uri() . '/assets/js/campfire.js', array(), $version, true );
+	//   Unload OSM Plugin CSS
+	wp_dequeue_style( 'OSM: Patrol Points' );
+	
+	wp_enqueue_style( 'google', 'https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900' );
+	wp_enqueue_style( 'campfire', get_stylesheet_directory_uri() . '/assets/css/campfire.css', array(), $version );
+
+	wp_enqueue_script( 'campfire', get_stylesheet_directory_uri() . '/assets/js/campfire.js', array(), $version, true );
 }
 add_action( 'wp_enqueue_scripts', 'campfire_scripts' );
 
@@ -52,38 +55,38 @@ Widget areas
 */
 function campfire_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'woggle' ),
+		'name'          => esc_html__( 'Sidebar', 'campfire' ),
 		'id'            => 'sidebar-r',
-		'description'   => esc_html__( 'Place widgets to right hand side of content', 'woggle' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'description'   => esc_html__( 'Place widgets to right hand side of content', 'campfire' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget__title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Left', 'woggle' ),
+		'name'          => esc_html__( 'Footer Left', 'campfire' ),
 		'id'            => 'footer-l',
-		'description'   => esc_html__( 'First Footer Widget Area', 'woggle' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'description'   => esc_html__( 'First Footer Widget Area', 'campfire' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget__title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Centre', 'woggle' ),
+		'name'          => esc_html__( 'Footer Centre', 'campfire' ),
 		'id'            => 'footer-c',
-		'description'   => esc_html__( 'Second Footer Widget Area', 'woggle' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'description'   => esc_html__( 'Second Footer Widget Area', 'campfire' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget__title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Right', 'woggle' ),
+		'name'          => esc_html__( 'Footer Right', 'campfire' ),
 		'id'            => 'footer-r',
-		'description'   => esc_html__( 'Third Footer Widget Area', 'woggle' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'description'   => esc_html__( 'Third Footer Widget Area', 'campfire' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget__title">',
 		'after_title'   => '</h2>',
 	) );

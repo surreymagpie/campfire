@@ -1,3 +1,184 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8,10 +189,6 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
-}
-
-body {
-  margin: 0;
 }
 
 html {
@@ -148,9 +325,47 @@ ul ul, ul ol, ol ul, ol ol {
   margin-bottom: 0;
 }
 
+table {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  border-collapse: collapse;
+  max-width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #999999;
+}
+
+th,
+thead {
+  font-weight: 700;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.75em 1em;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 hr {
   border: 2px solid #00a794;
   margin: 1.5rem 3rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background-color: #ffb4e5;
 }
 
 body {
@@ -171,10 +386,12 @@ body {
   margin-bottom: 3rem;
 }
 
-.sidebar-right {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-gap: 3rem;
+@media (min-width: 45rem) {
+  .sidebar-right {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 3rem;
+  }
 }
 
 @media (min-width: 60rem) {
@@ -185,6 +402,7 @@ body {
   }
   .sidebar-right {
     grid-auto-rows: max-content;
+    grid-gap: 0;
   }
 }
 
@@ -200,7 +418,7 @@ body {
 
 @media (min-width: 800px) {
   .footer__widget-areas {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, calc((100% - 6rem) / 3));
   }
   .footer__widget-area--left {
     grid-column: 1;
@@ -211,6 +429,130 @@ body {
   .footer__widget-area--right {
     grid-column: 3;
   }
+}
+
+.widget {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+}
+
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.widget select {
+  width: 100%;
+}
+
+.widget-title,
+.widget__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #000000;
+  border-bottom: 3px solid #7413dc;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+}
+
+@media (min-width: 60rem) {
+  .widget + .widget {
+    margin-top: 1.5rem;
+  }
+}
+
+.widget_calendar caption {
+  font-weight: 700;
+}
+
+.widget_calendar table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid;
+}
+
+.widget_calendar thead,
+.widget_calendar tfoot {
+  border: 1px solid;
+  background-color: #cccccc;
+}
+
+.widget_calendar tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+.widget_calendar th, .widget_calendar td {
+  width: 14%;
+  text-align: center;
+  border: none;
+  padding: 0.75em 0.25em;
+}
+
+.widget_rss li + li {
+  margin-top: 1.5rem;
+}
+
+.rss-date {
+  display: block;
+  font-size: 80%;
+  font-weight: 300;
+}
+
+.osm_comingup_title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.osm_comingup_date {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  font-weight: 300;
+}
+
+.osm_comingup_description {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-bottom: 1px solid #999999;
+  padding: 0.75em 0;
+}
+
+.osm_patrols {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: none;
+}
+
+.osm_patrols th,
+.osm_patrols td {
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #999999;
+}
+
+.osm_patrols th {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  font-weight: 700;
+}
+
+.osm_patrols th:first-child {
+  text-align: left;
+  width: 66%;
+}
+
+.points {
+  text-align: center;
 }
 
 .site__branding {
