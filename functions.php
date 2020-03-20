@@ -31,6 +31,11 @@ Theme supports
 */
 function campfire_setup()
 {
+	// Document title
+	add_theme_support( 'title-tag');
+	add_filter( 'document_title_separator', 'campfire_title_separator' );
+	
+	// Logo
 	add_theme_support( 'custom-logo', array(
 		'height'      => 100,
 		'width'       => 300,
@@ -39,6 +44,7 @@ function campfire_setup()
 		'header-text' => array( 'titles','site__title', 'site__tag')
 	));
 
+	// Menus
 	add_theme_support( 'menus' );
 
 	register_nav_menus( array(
@@ -107,3 +113,8 @@ function campfire_body_class( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'campfire_body_class' );
+
+function campfire_title_separator()
+{
+	return '&mdash;';
+}
