@@ -62,6 +62,9 @@ function campfire_setup()
 		'search-form',
 		'style'
 	));
+
+	// Automatic feed links
+	add_theme_support( 'automatic-feed-links' );
 }
 add_action( 'after_setup_theme', 'campfire_setup');
 
