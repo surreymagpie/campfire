@@ -51,6 +51,17 @@ function campfire_setup()
 		'primary' => esc_html__( 'Header Menu', 'campfire' ),
 		'footer' => esc_html__( 'Footer Menu', 'campfire' )
 	));
+
+	// HTML elements
+	add_theme_support( 'html5', array(
+		'caption',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'script',
+		'search-form',
+		'style'
+	));
 }
 add_action( 'after_setup_theme', 'campfire_setup');
 
