@@ -40,6 +40,7 @@
 				</div>
 			</nav>
 		</header>
+		<?php get_template_part( 'partials/content', 'hero' ); ?>
 		<div class="site__content container">
 			<div class="content-wrapper">
 				<main id="main-content" class="main-content">
