@@ -3,6 +3,11 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ) ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+        let html = document.querySelector('html');
+        html.classList.remove('no-js');
+        html.classList.add('js');
+	</script>
 	<?php wp_head(); ?>
 </head>
 	<body <?php body_class(); ?>>
