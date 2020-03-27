@@ -2,18 +2,6 @@
 
 /*
 ===============================
-Detect if JavaScript is available
-===============================
-*/
-
-document.addEventListener('DOMContentLoaded', function () {
-	const html = document.querySelector('html');
-	html.classList.remove('no-js');
-	html.classList.add('js')
-});
-
-/*
-===============================
 Toggle navigation menu
 ===============================
 */
