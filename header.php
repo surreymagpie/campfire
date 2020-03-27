@@ -40,5 +40,6 @@
 				</div>
 			</nav>
 		</header>
-		<div class="page__wrapper container">
-			<main class="site__content" role="main">
+		<div class="site__content container">
+			<div class="content-wrapper">
+				<main id="main-content" class="main-content">

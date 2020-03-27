@@ -375,13 +375,17 @@ body {
 }
 
 .container {
-  width: 94%;
+  padding-left: 3%;
+  padding-right: 3%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.page__wrapper {
+.site__content {
   flex-grow: 1;
+}
+
+.content-wrapper {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
@@ -395,7 +399,7 @@ body {
 }
 
 @media (min-width: 60rem) {
-  .has-sidebar-right .page__wrapper {
+  .has-sidebar-right .content-wrapper {
     display: grid;
     grid-template-columns: 1fr 20rem;
     grid-gap: 3rem;
@@ -557,7 +561,8 @@ body {
 
 .site__branding {
   text-align: center;
-  padding: 1.5rem 2rem 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .logo ~ .titles {
@@ -586,7 +591,6 @@ body {
     grid-template-columns: auto 1fr;
     grid-gap: 3rem;
     align-items: end;
-    padding: 1.5rem 0;
   }
   .logo ~ .titles {
     margin-top: 0;

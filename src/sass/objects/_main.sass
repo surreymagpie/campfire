@@ -4,12 +4,15 @@ body
   min-height: 100vh
 
 .container
-  width: $container
+  padding-left: 3%
+  padding-right: 3%
   max-width: $max-width
   margin: 0 auto
 
-.page__wrapper
+.site__content
   flex-grow: 1
+
+.content-wrapper
   margin-top: $double-spacing
   margin-bottom: $double-spacing
 
@@ -21,7 +24,7 @@ body
 
 @media (min-width: 60rem)
   .has-sidebar-right
-    .page__wrapper
+    .content-wrapper
       display: grid
       grid-template-columns: 1fr 20rem
       grid-gap: $double-spacing

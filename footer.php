@@ -1,6 +1,7 @@
-			</main>
-			<?php get_sidebar('sidebar-r'); ?>
-		</div>
+				</main> <!-- #main-content .main-content -->
+				<?php get_sidebar('sidebar-r'); ?>
+			</div> <!-- .content-wrapper -->
+		</div> <!-- .site__content.container -->
 		
 		<footer class="site__footer" role="contentinfo">
 		<?php if (is_active_sidebar( 'footer-l' ) || is_active_sidebar( 'footer-c' ) || is_active_sidebar( 'footer-r' )) : ?>
