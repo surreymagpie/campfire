@@ -3,7 +3,11 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ) ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php wp_title( ' | ', true, 'right' ) . bloginfo( 'name' ); ?></title>
+	<script>
+        let html = document.querySelector('html');
+        html.classList.remove('no-js');
+        html.classList.add('js');
+	</script>
 	<?php wp_head(); ?>
 </head>
 	<body <?php body_class(); ?>>
@@ -36,5 +40,7 @@
 				</div>
 			</nav>
 		</header>
-		<div class="page__wrapper container">
-			<main class="site__content" role="main">
+		<?php get_template_part( 'partials/content', 'hero' ); ?>
+		<div class="site__content container">
+			<div class="content-wrapper">
+				<main id="main-content" class="main-content">
