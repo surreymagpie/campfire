@@ -13,10 +13,14 @@
 	<body <?php body_class(); ?>>
 		<header class="site__header" role="banner">
 			<div class="site__branding container">
-				<?php if (has_custom_logo()) :?>
-				<div class="logo">
-					<?php the_custom_logo(); ?>
-				</div>
+				<?php if (has_custom_logo()) :
+					$logo_id = get_theme_mod( 'custom_logo' );
+					$logo = wp_get_attachment_image_src( $logo_id , 'full' ); ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-wrapper" title="<?php _e('Back to home page', 'campfire'); ?>">
+					<img	src="<?php echo esc_url( $logo[0]); ?>"
+							alt="<?php echo get_bloginfo( 'name' ); ?>"
+							class="logo">
+				</a>
 				<?php endif; ?>
 
 				<div class="titles">

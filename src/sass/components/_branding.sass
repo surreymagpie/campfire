@@ -3,8 +3,15 @@
   padding-top: $base-spacing
   padding-bottom: $base-spacing
 
-.logo ~ .titles
-  margin-top: $base-spacing
+.logo
+  display: block
+  height: 80px
+
+  &-wrapper
+    display: flex
+    justify-content: center
+    & ~ .titles
+      margin-top: $base-spacing
 
 .site__title
   @include font-size(28px, 28px)
@@ -18,10 +25,10 @@
 @media (min-width: 50rem)
   .site__branding
     text-align: left
-    display: grid
-    grid-template-columns: auto 1fr
-    grid-gap: $double-spacing
+    display: flex
+    justify-content: start
     align-items: end
 
-  .logo ~ .titles
+  .logo-wrapper ~ .titles
     margin-top: 0
+    margin-left: $base-spacing

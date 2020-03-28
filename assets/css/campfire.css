@@ -580,7 +580,17 @@ body {
   padding-bottom: 1.5rem;
 }
 
-.logo ~ .titles {
+.logo {
+  display: block;
+  height: 80px;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-wrapper ~ .titles {
   margin-top: 1.5rem;
 }
 
@@ -602,13 +612,13 @@ body {
 @media (min-width: 50rem) {
   .site__branding {
     text-align: left;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 3rem;
+    display: flex;
+    justify-content: start;
     align-items: end;
   }
-  .logo ~ .titles {
+  .logo-wrapper ~ .titles {
     margin-top: 0;
+    margin-left: 1.5rem;
   }
 }
 
