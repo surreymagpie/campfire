@@ -11,6 +11,7 @@
 	<?php wp_head(); ?>
 </head>
 	<body <?php body_class(); ?>>
+	<a href="#main-content" class="skip-link screen-reader-text" tabindex="0"><?php _e('Skip to content', 'campfire'); ?></a>
 		<header class="site__header" role="banner">
 			<div class="site__branding container">
 				<?php if (has_custom_logo()) :

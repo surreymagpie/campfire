@@ -436,6 +436,24 @@ body {
   }
 }
 
+.screen-reader-text {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link {
+  font-weight: 700;
+  padding: 0.5em;
+  outline: 3px red dashed;
+  margin: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 .banner {
   height: calc( 100vw / 32 * 9);
   position: relative;
