@@ -41,6 +41,7 @@
 						'theme_location'  => 'primary',
 						'container'       => false,
 						'menu_class'      => 'primary-menu__list',
+						'fallback_cb'     => 'campfire_default_menu'
 				) ); ?>
 				</div>
 			</nav>

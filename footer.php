@@ -17,6 +17,20 @@
 			<?php endif; ?>
 		</aside>
 		<?php endif; ?>
+		<div class="container">
+			<nav class="footer-menu">
+			<?php wp_nav_menu( array(
+				'walker'			=> new Campfire_Footer_Nav_Walker(),
+				'theme_location'	=> 'footer',
+				'container'			=> false,
+				'menu_class'		=> 'footer-menu__list',
+				'fallback_cb'		=> 'campfire_default_menu'
+			)); ?>
+			</nav>
+			<div class="copyright">
+				&copy; <?php the_time('Y'); ?>&nbsp;<?php bloginfo('name'); ?>
+			</div>
+		</div>
 		</footer>
 		<?php wp_footer(); ?>
 	</body>
