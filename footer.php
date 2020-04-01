@@ -27,6 +27,9 @@
 				'fallback_cb'		=> 'campfire_default_menu'
 			)); ?>
 			</nav>
+			<div class="copyright">
+				&copy; <?php the_time('Y'); ?>&nbsp;<?php bloginfo('name'); ?>
+			</div>
 		</div>
 		</footer>
 		<?php wp_footer(); ?>
