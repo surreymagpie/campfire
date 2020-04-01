@@ -309,7 +309,9 @@ a, a:visited {
 
 a:hover,
 a:focus {
-  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 2px;
 }
 
 ul, ol {
