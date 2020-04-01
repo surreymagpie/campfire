@@ -2,7 +2,7 @@
 
 /*
 ===============================
-Engueue Assets
+Enqueue Assets
 ===============================
 */
 function campfire_scripts()
