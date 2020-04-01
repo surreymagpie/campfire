@@ -157,3 +157,7 @@ function campfire_custom_image_size_names( $sizes ) {
 
 add_filter( 'image_size_names_choose', 'campfire_custom_image_size_names' );
 	
+// Menu Fallback
+function campfire_default_menu() {
+    get_template_part( 'partials/fallback', 'menu' );
+}
