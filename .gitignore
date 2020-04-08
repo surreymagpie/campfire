@@ -4,3 +4,6 @@ node_modules/
 # Ignore local dev settings
 settings.js
 .vscode/settings.json
+
+# Ignore composer dependencies
+vendor/
