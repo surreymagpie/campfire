@@ -13,6 +13,7 @@
 	<body <?php body_class(); ?>>
 	<a href="#main-content" class="skip-link screen-reader-text" tabindex="0"><?php _e('Skip to content', 'campfire'); ?></a>
 		<header class="site__header" role="banner">
+			<?php get_template_part( 'partials/social', 'icons' ); ?>
 			<div class="site__branding container">
 				<?php if (has_custom_logo()) :
 					$logo_id = get_theme_mod( 'custom_logo' );

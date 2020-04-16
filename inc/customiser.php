@@ -22,16 +22,19 @@ function campfire_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'facebook', array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field',
 	));
-
+	
 	$wp_customize->add_setting( 'twitter', array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field',
 	));
-
+	
 	$wp_customize->add_setting( 'instagram', array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field',
 	));
 
 	$wp_customize->add_control(
@@ -58,13 +61,13 @@ function campfire_customize_register( $wp_customize ) {
 			$wp_customize,
 			'facebook',
 			array(
-				'label'			=> __( 'Facebook URL', 'campfire' ),
+				'label'			=> __( 'Facebook', 'campfire' ),
 				'section'		=> 'campfire_theme_section',
 				'settings'		=> 'facebook',
 				'type'			=> 'text',
-				'description'	=> __('Enter the full URL to your group\'s Facebook Page', 'campfire'),
+				'description'	=> __('Enter the ID of your Facebook page (ie the part that follows https://www.facebook.com/)', 'campfire'),
 				'input_attrs'	=> array(
-					'placeholder' => 'https://'
+					'placeholder' => 'https://www.facebook.com/...'
 				)
 			)
 		)
@@ -78,9 +81,9 @@ function campfire_customize_register( $wp_customize ) {
 				'section'		=> 'campfire_theme_section',
 				'settings'		=> 'instagram',
 				'type'			=> 'text',
-				'description'	=> __('Enter the full URL to your group\'s Instagram Page', 'campfire'),
+				'description'	=> __('Enter the ID of your Instagram page', 'campfire'),
 				'input_attrs'	=> array(
-					'placeholder' => 'https://'
+					'placeholder' => 'https://www.instagram.com/...'
 				)
 			)
 		)
@@ -94,9 +97,9 @@ function campfire_customize_register( $wp_customize ) {
 				'section'		=> 'campfire_theme_section',
 				'settings'		=> 'twitter',
 				'type'			=> 'text',
-				'description'	=> __('Enter the full URL to your group\'s Twitter Page', 'campfire'),
+				'description'	=> __('Enter the ID to your Twitter page (without the @ character)', 'campfire'),
 				'input_attrs'	=> array(
-					'placeholder' => 'https://'
+					'placeholder' => 'https://twitter.com/...'
 				)
 			)
 		)

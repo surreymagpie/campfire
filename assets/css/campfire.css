@@ -1,3 +1,7 @@
+:root {
+  --icon-size: 2rem;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
@@ -606,6 +610,36 @@ body {
 
 .points {
   text-align: center;
+}
+
+.social-icons {
+  text-align: right;
+}
+
+.social-icons .dashicons {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  font-size: var(--icon-size);
+}
+
+.social-link {
+  line-height: 1;
+}
+
+.social-link:hover {
+  text-decoration: none;
+}
+
+.dashicons-facebook {
+  color: #4267b2;
+}
+
+.dashicons-instagram {
+  color: #231F20;
+}
+
+.dashicons-twitter {
+  color: #38A1F3;
 }
 
 .site__branding {
