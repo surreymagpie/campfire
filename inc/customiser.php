@@ -128,7 +128,7 @@ function campfire_head()
 	}
 	?>
 		<style>
-			:root { --colour-primary: <?php echo $primary_colour; ?>;--border: 3px solid var(--colour-primary) }
+			:root { --colour-primary: <?php echo $primary_colour; ?>; }
 		</style>
 	<?php
 }
