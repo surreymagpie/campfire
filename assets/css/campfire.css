@@ -506,7 +506,7 @@ body {
   line-height: 1.2;
   font-weight: 900;
   color: #000000;
-  border-bottom: 3px solid #7413dc;
+  border-bottom: var(--border);
   margin-bottom: 1em;
   padding-bottom: 0.5em;
 }
@@ -662,7 +662,7 @@ body {
 
 .primary-menu__list,
 .sub-menu {
-  background-color: #7413dc;
+  background-color: var(--colour-primary);
   color: #ffffff;
   margin-bottom: 0;
   padding-left: 0;
@@ -684,7 +684,7 @@ body {
 .primary-menu__list a:hover, .primary-menu__list a:focus,
 .sub-menu a:hover,
 .sub-menu a:focus {
-  background-color: #00a794;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .current-menu-item a,
@@ -737,7 +737,7 @@ body {
 }
 
 #menu-toggle {
-  fill: #7413dc;
+  fill: var(--colour-primary);
 }
 
 #menu-toggle.inverted {
@@ -746,7 +746,7 @@ body {
 
 @media (min-width: 50rem) {
   .js .primary-menu {
-    background-color: #7413dc;
+    background-color: var(--colour-primary);
     color: #ffffff;
   }
   .js .primary-menu__list {
@@ -810,7 +810,6 @@ body {
   position: absolute;
   width: 100%;
   left: 0;
-  background-color: #333333;
   z-index: 10;
 }
 

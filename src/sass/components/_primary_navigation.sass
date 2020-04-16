@@ -4,7 +4,7 @@
 
 .primary-menu__list,
 .sub-menu
-  background-color: $scout-purple
+  background-color: var(--colour-primary)
   color: $scout-white
   margin-bottom: 0
   padding-left: 0
@@ -20,7 +20,7 @@
 
     &:hover,
     &:focus
-      background-color: $scout-teal
+      background-color: rgba(255,255,255,0.1)
 
 .current-menu-item a,
 .current-page-ancestor a,
@@ -68,7 +68,7 @@
 
 // Styling SVG
 #menu-toggle
-  fill: $scout-purple
+  fill: var(--colour-primary)
   
   &.inverted
     fill: $scout-white
@@ -77,7 +77,7 @@
 @media (min-width: 50rem)
   .js
     .primary-menu
-      background-color: $scout-purple
+      background-color: var(--colour-primary)
       color: $scout-white
 
       &__list
