@@ -3,7 +3,7 @@
     "description": "A WordPress theme for UK scout groups based on the 2018 brand guidelines",
     "type": "wordpress-theme",
     "license": "GPL-2.0-or-later",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "authors": [
         {
             "name": "Rob Curtis",

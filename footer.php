@@ -5,17 +5,17 @@
 		
 		<footer class="site__footer" role="contentinfo">
 		<?php if (is_active_sidebar( 'footer-l' ) || is_active_sidebar( 'footer-c' ) || is_active_sidebar( 'footer-r' )) : ?>
-		<aside class="footer__widget-areas container">
+		<div class="footer__widget-areas container">
 			<?php if(is_active_sidebar('footer-l')): ?>
-				<div class="footer__widget-area--left"><?php dynamic_sidebar( 'footer-l' );?></div>
+				<section class="footer__widget-area--left"><?php dynamic_sidebar( 'footer-l' );?></section>
 			<?php endif; ?>
 			<?php if(is_active_sidebar('footer-c')): ?>
-				<div class="footer__widget-area--centre"><?php dynamic_sidebar( 'footer-c' );?></div>
+				<section class="footer__widget-area--centre"><?php dynamic_sidebar( 'footer-c' );?></section>
 			<?php endif; ?>
 			<?php if(is_active_sidebar('footer-r')): ?>
-				<div class="footer__widget-area--right"><?php dynamic_sidebar( 'footer-r' );?></div>
+				<section class="footer__widget-area--right"><?php dynamic_sidebar( 'footer-r' );?></section>
 			<?php endif; ?>
-		</aside>
+		</div>
 		<?php endif; ?>
 		<div class="container">
 			<nav class="footer-menu">
