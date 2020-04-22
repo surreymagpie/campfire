@@ -44,6 +44,7 @@ if ( have_posts() ) :
 			</section>
 
 		</article>
+		<?php if (comments_open() || get_comments_number()) : comments_template(); endif; ?>
 	<?php endwhile;
 else:
 	_e( 'No content has been found.', 'campfire' );
