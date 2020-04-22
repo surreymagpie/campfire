@@ -13,27 +13,36 @@ if ( have_posts() ) :
 	while ( have_posts() ) : the_post(); ?>
 		<article class="main-article">
 			<header class="article__header">
-				<h2><?php the_title(); ?></h2>
-
-				<?php if (get_the_author()) : ?>
-				<small class="article__meta">
-					<?php echo sprintf( esc_html( 'Posted by %s on %s', 'campfire'), get_the_author_posts_link(), get_the_date() ); ?>
-				</small>
-				<?php endif; ?>
+				<h2 class="post__title"><?php the_title(); ?></h2>
 			</header>
 
 			<div class="article__content">
 				<?php the_content(); ?>
 			</div>
 
-			<footer class="article__footer">
-				<h4><?php _e( 'Categorised under: ', 'campfire' ); ?></h4>
-				<?php the_category();
+			<section class="article__info">
+				<?php if (get_the_author()) : ?>
+				<div class="article__author">
+					<span class="icon dashicons-calendar-alt"></span>
+					<?php echo sprintf( esc_html( 'Posted by %s on %s', 'campfire'), get_the_author_posts_link(), get_the_date() ); ?>
+				</div>
+				<?php endif; ?>
+				<div class="article__comment-number">
+					<span class="icon dashicons-admin-comments"></span>
+					<?php comments_number();?>
+				</div>
+				<div class="article__categories">
+					<span class="icon dashicons-category"></span>
+					<?php the_category( ', ' ); ?>
+				</div>
+				<?php if ( ! empty( get_the_tags())) : ?>
+				<div class="article__tags">
+					<span class="icon dashicons-tag"></span>
+					<?php the_tags( '', ', ', '' ); ?>
+				</div>
+				<?php endif; ?>
+			</section>
 
-				if ( ! empty( get_the_tags())) : ?>
-					<p class="tags"><strong><?php _e( 'Tags: ', 'campfire' ) ?></strong><?php the_tags( '', ', ', '' );
-				endif; ?>
-			</footer>
 		</article>
 	<?php endwhile;
 else:
