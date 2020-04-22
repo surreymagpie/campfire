@@ -18,7 +18,12 @@ function campfire_customize_register( $wp_customize ) {
 		'capability' => 'edit_theme_options',
 		'default' => 'england',
 	));
-	
+
+	$wp_customize->add_setting( 'logo_display', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+	));
+
 	$wp_customize->add_setting( 'facebook', array(
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
@@ -52,6 +57,20 @@ function campfire_customize_register( $wp_customize ) {
 					'scotland'	=> __( 'Scotland', 'campfire'),
 					'wales'		=> __( 'Wales', 'campfire' ),
 				)
+			)
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'logo_display',
+			array(
+				'label'			=> __( 'Use Default Logo', 'campfire' ),
+				'section'		=> 'campfire_theme_section',
+				'settings'		=> 'logo_display',
+				'type'			=> 'checkbox',
+				'description'	=> __('NB: A custom logo uploaded in the site identity tab will take priority.', 'campfire'),
 			)
 		)
 	);
