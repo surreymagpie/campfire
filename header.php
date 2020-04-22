@@ -23,6 +23,12 @@
 							alt="<?php echo get_bloginfo( 'name' ); ?>"
 							class="logo">
 				</a>
+				<?php else: ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-wrapper" title="<?php _e('Back to home page', 'campfire'); ?>">
+					<svg viewBox="0 0 110 100" width="110px" height="100px">
+						<use href="<?php echo get_template_directory_uri() . '/assets/images/fleur-de-lis.svg#logo'; ?>" style="fill: var(--colour-primary)"></use>
+					</svg>
+				</a>
 				<?php endif; ?>
 
 				<div class="titles">
