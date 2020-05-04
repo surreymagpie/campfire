@@ -1,14 +1,14 @@
 {
-    "name": "surreymagpie/campfire",
-    "description": "A WordPress theme for UK scout groups based on the 2018 brand guidelines",
-    "type": "wordpress-theme",
-    "license": "GPL-2.0-or-later",
-    "version": "0.0.6",
-    "authors": [
-        {
-            "name": "Rob Curtis",
-            "email": "surreymagpie@yahoo.co.uk"
-        }
-    ],
-    "require": {}
+  "name": "surreymagpie/campfire",
+  "description": "A WordPress theme for UK scout groups based on the 2018 brand guidelines",
+  "type": "wordpress-theme",
+  "license": "GPL-2.0-or-later",
+  "version": "0.0.7",
+  "authors": [
+    {
+      "name": "Rob Curtis",
+      "email": "surreymagpie@yahoo.co.uk"
+    }
+  ],
+  "require": {}
 }
