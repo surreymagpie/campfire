@@ -489,6 +489,152 @@ body {
   object-fit: cover;
 }
 
+.post__title {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1.20833;
+  color: #000000;
+  font-weight: 900;
+  border-bottom: var(--border);
+}
+
+.article__info {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.33333;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  border-top: var(--border);
+}
+
+.article__author, .article__categories, .article__comment-number, .article__tags {
+  margin-bottom: 4px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.icon {
+  font-family: 'dashicons';
+  display: inline;
+  font-size: 1rem;
+}
+
+.icon::before {
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form__input {
+  font-size: 18px;
+  width: 100%;
+  padding: 0.5em 1em;
+  outline: none;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.5rem;
+}
+
+.form__input:focus {
+  border-color: #00a794;
+  color: #00a794;
+}
+
+.form__label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #666666;
+}
+
+.form__submit {
+  padding: 0.5em 1.5em;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #00a794;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.comments__title,
+.comment-reply-title {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1;
+  color: #000000;
+}
+
+.comments__number {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  line-height: 1.14286;
+  color: #00a794;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.comments__list,
+.children {
+  list-style: none;
+  padding-left: 0;
+}
+
+.comments__list > .comment {
+  border-bottom: 1px solid #999999;
+}
+
+.children {
+  margin-top: 1em;
+  padding-left: 1em;
+}
+
+.comment-metadata {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.33333;
+  margin-bottom: 0.5rem;
+}
+
+.comment p {
+  margin-bottom: 0.5em;
+}
+
+.comment + .comment {
+  margin-top: 1.5rem;
+}
+
+.comment-meta {
+  text-align: center;
+}
+
+.comment-body {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1em;
+}
+
+.reply {
+  grid-column: 1 / -1;
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+}
+
+.says {
+  display: none;
+}
+
 .widget {
   background-color: #f5f5f5;
   padding: 1.5rem;
