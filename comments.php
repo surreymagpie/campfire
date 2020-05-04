@@ -11,9 +11,14 @@ $comment_args = array(
 
 // Comment Loop
 if ( have_comments() ) : ?>
-<section class="comments">
+<section class="comments" id="comments">
     <h3 class="comments__title"><?php _e('Comments', 'campfire'); ?></h3>
-    <p>There are <?php comments_number(); ?> on <?php the_title(); ?></p>
+    <p class="comments__number">
+        <?php comments_number();
+			_e(' on ');
+			the_title('&ldquo;', '&rdquo;');
+		?>
+    </p>
     <ul class="comments__list">
         <?php wp_list_comments( $comment_args); ?>
     </ul>
@@ -40,7 +45,7 @@ $form_args = array(
 	'cancel_reply_link'	=> __( 'Cancel Reply' ),
 	'label_submit'		=> __( 'Post Comment' ),
 	'format'			=> 'html5',
-	'comment_field'		=> '<div class="form__group form__group--comment"><label class="form__label" for="comment">' . _x( 'Comment', 'campfire' ) . '</label><textarea id="comment" class="form__input" name="comment" aria-required="true" cols="45" rows="6" required="required"></textarea></div>',
+	'comment_field'		=> '<div class="form__group form__group--comment"><label class="form__label" for="comment">' . _x( 'Comment *', 'campfire' ) . '</label><textarea id="comment" class="form__input" name="comment" aria-required="true" cols="45" rows="6" required="required"></textarea></div>',
 	'fields'			=> apply_filters( 'comment_form_default_fields', $fields ),
 );
 
