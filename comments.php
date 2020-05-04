@@ -23,11 +23,15 @@ if ( have_comments() ) : ?>
         <?php wp_list_comments( $comment_args); ?>
     </ul>
 </section>
-<?php else :
-	_e('No comments found.', 'campfire');
-endif;
+<?php else : ?>
+<p class="comments__number">
+    <?php _e('No comments found.', 'campfire');  ?>
+</p>
+<?php endif;
 
 // Comment form
+if (comments_open()) :
+
 $fields = array(
 	'author'	=>	'<div class="form__group form__group--author"><label class="form__label" for="author">Name *</label><input id="author" name="author" type="text" class="form__input" value="" maxlength="245" required="required" /></div>',
 	'email'	=>	'<div class="form__group form__group--email"><label class="form__label" for="email">Email *</label><input id="email" name="email" type="email" class="form__input" value="" maxlength="100" aria-describedby="email-notes" required="required" /></div>',
@@ -49,8 +53,12 @@ $form_args = array(
 	'fields'			=> apply_filters( 'comment_form_default_fields', $fields ),
 );
 
-if (comments_open()) :
 	comment_form( $form_args);
-else :
-	_e('Comments are closed.', 'campfire');
-endif;
+
+else : ?>
+
+<p class="comments__closed">
+    <?php _e('Comments are closed.', 'campfire'); ?>
+</p>
+
+<?php endif;
